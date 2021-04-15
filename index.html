@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reusable modal</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <h1>reusable-modal</h1>
+    </div>
+    <div id="spacer">
+    </div>
+
+    <!-- MODAL -->
+    <div id="first_modal" class="modal__wrapper">
+        <div class="modal--background" onclick="toggleModal('first_modal')"></div>
+        <div class="modal">
+            <span class="modal__close" onclick="toggleModal('first_modal')">&times;</span>
+            <h2>#first_modal</h2>
+        </div>
+    </div>
+
+    <div id="second_modal" class="modal__wrapper">
+        <div class="modal--background" onclick="toggleModal('second_modal')"></div>
+        <div class="modal">
+            <span class="modal__close" onclick="toggleModal('second_modal')">&times;</span>
+            <h2>#second_modal</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in euismod metus. Phasellus quis nunc
+                tincidunt, pulvinar justo sit amet, laoreet risus. Fusce ut enim pulvinar, accumsan erat et, placerat
+                eros. Curabitur quis bibendum mauris. Quisque sed aliquet nulla, et consectetur ex. Duis ut eros euismod
+                enim mattis viverra nec sit amet arcu. Aliquam in nisl lectus. In et fringilla quam.
+
+                Quisque dolor felis, tincidunt et scelerisque nec, convallis vitae felis. Nam vitae ex convallis nisl
+                aliquam posuere et vitae arcu. Sed quis purus vel est tristique laoreet. Fusce quis eleifend metus.
+                Vestibulum lacinia urna vitae arcu tincidunt rhoncus. Phasellus pellentesque est urna, at faucibus justo
+                suscipit viverra. Nullam fermentum hendrerit tincidunt.
+            </p>
+        </div>
+    </div>
+    <!--  -->
+
+    <section id="first_page">
+        <div class="button_wrapper">
+            <div class="my_btn" onclick="toggleModal('first_modal')">
+                <h3>open #first_modal</h3>
+            </div>
+            <div class="my_btn" onclick="toggleModal('second_modal')">
+                <h3>open #second_modal</h3>
+            </div>
+        </div>
+    </section>
+    <section id="second_page">
+    </section>
+    <section id="third_page">
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

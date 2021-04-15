@@ -1,0 +1,159 @@
+/* MODAL */
+.modal__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    display:none;
+}
+
+.modal--background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal--opened {
+    display: flex;
+}
+
+.modal__close {
+    color: rgb(88, 88, 88);
+    position: absolute;
+    right: 8px;
+    top: 1px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal {
+    background-color: #ffffff;
+    position: relative;
+    min-height: 200px;
+    max-width: 500px;
+    width: 80%;
+    padding: 10px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ANIMATION */
+.fade-in {
+    animation: fade-in 0.6s both;
+}
+
+.fade-out {
+    animation: fade-out 0.3s both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* IRRELEVANT CSS */
+body {
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+h1, h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    width:100%;
+    height:100vh;
+
+    position: relative;
+}
+
+#navbar {
+    height: 50px;
+    background-color: rgb(214, 214, 214);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top:0px;
+
+    z-index: 2;
+}
+
+#navbar h1 {
+    margin-left: 10px;
+}
+
+#spacer {
+    height: 50px;
+}
+
+#first_page {
+    background: #474954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second_page {
+    background: #7284A8;
+    text-align: center;
+}
+
+#third_page {
+    background: #9E788F;
+    text-align: center;
+}
+
+.button_wrapper {
+    display: flex;
+}
+
+.my_btn {
+    display:flex;
+    padding: 10px;
+    margin: 10px;
+    background: yellow;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    cursor: pointer;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.my_btn:hover {
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
